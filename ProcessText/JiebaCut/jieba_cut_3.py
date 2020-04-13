@@ -31,7 +31,7 @@ for x, w in jieba.analyse.textrank(s, 10,withWeight=True):
     print('%s %s' % (x, w))
 
 print('='*60)
-print('3. 词性标注')
+print('3. 词性标注posseg')
 print('-'*60)
 
 words = jieba.posseg.cut("我爱北京天安门")

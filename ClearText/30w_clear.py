@@ -29,12 +29,14 @@ class loadFiles(object):
                 file_path = os.path.join(folder, file)
                 # 文件具体操作
                 if os.path.isfile(file_path):
-                    this_file = open(file_path, 'rb') #rb读取方式更快
+                    # this_file = open(file_path, 'rb') #rb读取方式更快
+                    # content = this_file.read().decode('utf8')
+                    # yield catg, content
+                    # this_file.close()
+
                     with open(file_path,'r',encoding='utf-8') as f:
                         content = f.read()
-                    # content = this_file.read().decode('utf8')
                         yield catg, content
-                    # this_file.close()
 
 
 # 正则对字符串清洗
