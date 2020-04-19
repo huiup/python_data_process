@@ -1,5 +1,6 @@
 #coding=utf8
 '''
+此处学习时没具体了解，跳过···
 JPype is an effort to allow python programs full access to java class
 libraries
 pip install JPype1
