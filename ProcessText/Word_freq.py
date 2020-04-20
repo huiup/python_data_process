@@ -37,18 +37,20 @@ def nltk_wf_feature(word_list=None):
     # # 该方法接受一个数字n作为参数，会以表格的方式打印出现次数最多的前n项
     # fdist.tabulate(10) # 频率分布表
 
-    print('='*3,'可视化词频','='*3)
-    fdist.plot(30) # 频率分布图
-    fdist.plot(30,cumulative=True) # 频率累计图
+    # print('='*3,'可视化词频','='*3)
+    # fdist.plot(30) # 频率分布图
+    # fdist.plot(30,cumulative=True) # 频率累计图
 
     # print('='*3,'根据词语长度查找词语','='*3)
     # wlist =[w for w in fdist if len(w)>2]
     # print(wlist)
 
     # ********统计词频方法2**************
-    # from collections import Counter
-    # Words = Counter(word_list)
-    # print(Words.keys(),Words.values())
+    from collections import Counter
+    Words = Counter(word_list)
+    for word,freq in Words.items():
+        print(word,':',freq)
+    
     # wlist =[w for w in Words if len(w)>2]
     # print(wlist)
 
@@ -60,6 +62,6 @@ if __name__ == "__main__":
     str_doc = read_file(path)
     # 词频特征统计
     word_list = seg_doc(str_doc)
-    nltk_wf_feature(word_list)
-    # print(word_list)
+    # nltk_wf_feature(word_list)
+    print(word_list)
     

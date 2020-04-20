@@ -23,7 +23,7 @@ def sklearn_tfidf_feature(corpus=None):
     weight = tfidf.toarray()
     # 第一个for遍历所有文本，第二个for遍历每一类文本下的词语权重
     for i in range(len(weight)):
-        print(u"-------这里输出第", i, u"类文本的词语tf-idf权重------")
+        print(u"-------这里输出第", i+1, u"类文本的词语tf-idf权重------")
         for j in range(len(word)):
             print(word[j], weight[i][j])
 
